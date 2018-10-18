@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mapper.SuccessMapper">
+    <insert id="insertRecord" parameterType="po.Success">
+        INSERT INTO success (purchaseID, phone, status)
+        VALUE (#{ID}, #{phone}, #{status})
+    </insert>
+
+    <select id="queryByPurchaseID" resultType="po.Success">
+        SELECT *
+        FROM success
+        WHERE purchaseID = #{ID}
+    </select>
+</mapper>
