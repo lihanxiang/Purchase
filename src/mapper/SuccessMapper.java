@@ -6,6 +6,8 @@ import po.Success;
 import java.util.List;
 
 public interface SuccessMapper {
-    void insertRecord(Success success);
-    List<Success> queryByPurchaseID(@Param("ID") Long ID);
+    int insertRecord(@Param("purchaseID")int purchaseID, @Param("phone")int phone);
+
+    Success isRepeat(Success success);
+    Success queryByPurchaseID(@Param("purchaseID")int purchaseID, @Param("phone")int phone);
 }

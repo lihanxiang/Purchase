@@ -4,18 +4,20 @@ public class Exposer {
 
     private boolean exposed;
     private String md5;
-    private Long purchaseID;
+    private int purchaseID;
     private Long startTime;
     private Long endTime;
     private Long now;
 
-    public Exposer(boolean exposed, String md5, Long purchaseID) {
+    //already open
+    public Exposer(boolean exposed, String md5, int purchaseID) {
         this.exposed = exposed;
         this.md5 = md5;
         this.purchaseID = purchaseID;
     }
 
-    public Exposer(boolean exposed, Long purchaseID, Long startTime, Long endTime, Long now) {
+    //don't open yet
+    public Exposer(boolean exposed, int purchaseID, Long startTime, Long endTime, Long now) {
         this.exposed = exposed;
         this.purchaseID = purchaseID;
         this.startTime = startTime;
@@ -39,11 +41,11 @@ public class Exposer {
         this.md5 = md5;
     }
 
-    public Long getPurchaseID() {
+    public int getPurchaseID() {
         return purchaseID;
     }
 
-    public void setPurchaseID(Long purchaseID) {
+    public void setPurchaseID(int purchaseID) {
         this.purchaseID = purchaseID;
     }
 

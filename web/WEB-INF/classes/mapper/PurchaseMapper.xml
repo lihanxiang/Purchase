@@ -4,17 +4,24 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="mapper.PurchaseMapper">
     <update id="reduceInventory" parameterType="po.Purchase">
-        UPDATE purchase
-        SET inventory = inventory - 1
-        WHERE purchaseID = #{ID}
-        AND #{startTime} >= startTime
-        AND endTime >= #{startTime}
+        UPDATE product, purchase
+        SET product.inventory = product.inventory - 1
+        WHERE product.productID = purchase.productID
+        AND purchase.purchaseID = #{purchaseID}
+        AND #{purchaseTime} >= purchase.startTime
+        AND purchase.endTime >= #{purchaseTime}
     </update>
 
-    <select id="queryByID" parameterType="Long">
+    <select id="queryByProductID" resultType="po.Purchase">
         SELECT *
         FROM purchase
-        WHERE purchaseID = #{ID}
+        WHERE productID = #{productID}
+    </select>
+
+    <select id="queryByID" resultType="po.Purchase">
+        SELECT *
+        FROM purchase
+        WHERE purchaseID = #{purchaseID}
     </select>
 
     <select id="queryAll" resultType="po.Purchase">

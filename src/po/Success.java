@@ -3,24 +3,24 @@ package po;
 import java.util.Date;
 
 public class Success {
-    private Long ID;
-    private Long phone;
+    private int purchaseID;
+    private int phone;
     private int status;
     private Date createTime;
 
-    public Long getID() {
-        return ID;
+    public int getPurchaseID() {
+        return purchaseID;
     }
 
-    public void setID(Long ID) {
-        this.ID = ID;
+    public void setPurchaseID(int purchaseID) {
+        this.purchaseID = purchaseID;
     }
 
-    public Long getPhone() {
+    public int getPhone() {
         return phone;
     }
 
-    public void setPhone(Long phone) {
+    public void setPhone(int phone) {
         this.phone = phone;
     }
 

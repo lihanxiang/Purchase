@@ -5,13 +5,13 @@ import po.Success;
 
 public class PurchaseExecutor {
 
-    private Long purchaseID;
+    private int purchaseID;
     private int status;
     private String statusInfo;
     private Success success;
 
     //success
-    public PurchaseExecutor(Long purchaseID, StatusEnum statusEnum, Success success) {
+    public PurchaseExecutor(int purchaseID, StatusEnum statusEnum, Success success) {
         this.purchaseID = purchaseID;
         this.status = statusEnum.getStatus();
         this.statusInfo = statusEnum.getStatusInfo();
@@ -19,17 +19,17 @@ public class PurchaseExecutor {
     }
 
     //fail
-    public PurchaseExecutor(Long purchaseID, StatusEnum statusEnum) {
+    public PurchaseExecutor(int purchaseID, StatusEnum statusEnum) {
         this.purchaseID = purchaseID;
         this.status = statusEnum.getStatus();
         this.statusInfo = statusEnum.getStatusInfo();
     }
 
-    public Long getPurchaseID() {
+    public int getPurchaseID() {
         return purchaseID;
     }
 
-    public void setPurchaseID(Long purchaseID) {
+    public void setPurchaseID(int purchaseID) {
         this.purchaseID = purchaseID;
     }
 

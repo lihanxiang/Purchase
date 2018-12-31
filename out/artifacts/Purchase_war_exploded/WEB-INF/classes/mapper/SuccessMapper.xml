@@ -3,14 +3,15 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="mapper.SuccessMapper">
-    <insert id="insertRecord" parameterType="po.Success">
+    <insert id="insertRecord">
         INSERT INTO success (purchaseID, phone, status)
-        VALUE (#{ID}, #{phone}, #{status})
+        VALUE (#{purchaseID}, #{phone}, 0)
     </insert>
 
     <select id="queryByPurchaseID" resultType="po.Success">
         SELECT *
         FROM success
-        WHERE purchaseID = #{ID}
+        WHERE purchaseID = #{purchaseID}
+        AND phone = #{phone}
     </select>
 </mapper>

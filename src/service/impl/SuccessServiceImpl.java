@@ -19,12 +19,12 @@ public class SuccessServiceImpl implements SuccessService {
     }
 
     @Override
-    public void insertRecord(Success success) {
-        successMapper.insertRecord(success);
+    public void insertRecord(int purchaseID, int userPhone) {
+        successMapper.insertRecord(purchaseID, userPhone);
     }
 
     @Override
-    public List<Success> queryByPurchaseID(Long ID) {
-        return successMapper.queryByPurchaseID(ID);
+    public Success queryByPurchaseID(int purchaseID, int userPhone) {
+        return successMapper.queryByPurchaseID(purchaseID, userPhone);
     }
 }

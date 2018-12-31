@@ -44,6 +44,7 @@
           <element id="file-copy" path="$PROJECT_DIR$/lib/spring-context-support-4.3.18.RELEASE.jar" />
           <element id="file-copy" path="$PROJECT_DIR$/lib/spring-instrument-tomcat-4.3.18.RELEASE.jar" />
           <element id="library" level="project" name="lib" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/jedis-2.4.2.jar" />
         </element>
       </element>
     </root>

@@ -3,19 +3,29 @@ package po;
 import java.util.Date;
 
 public class Purchase {
-    private Long ID;
+    private int purchaseID;
+    private int productID;
     private String name;
-    private int inventory;
+    private double price;
     private Date startTime;
     private Date endTime;
     private Date createTime;
+    private String md5;
 
-    public Long getID() {
-        return ID;
+    public int getPurchaseID() {
+        return purchaseID;
     }
 
-    public void setID(Long ID) {
-        this.ID = ID;
+    public void setPurchaseID(int purchaseID) {
+        this.purchaseID = purchaseID;
+    }
+
+    public int getProductID() {
+        return productID;
+    }
+
+    public void setProductID(int productID) {
+        this.productID = productID;
     }
 
     public String getName() {
@@ -26,12 +36,12 @@ public class Purchase {
         this.name = name;
     }
 
-    public int getInventory() {
-        return inventory;
+    public double getPrice() {
+        return price;
     }
 
-    public void setInventory(int inventory) {
-        this.inventory = inventory;
+    public void setPrice(double price) {
+        this.price = price;
     }
 
     public Date getStartTime() {
@@ -56,5 +66,13 @@ public class Purchase {
 
     public void setCreateTime(Date createTime) {
         this.createTime = createTime;
+    }
+
+    public String getMd5() {
+        return md5;
+    }
+
+    public void setMd5(String md5) {
+        this.md5 = md5;
     }
 }
